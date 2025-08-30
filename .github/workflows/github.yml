@@ -25,7 +25,8 @@ jobs:
           pip install pytest
 
       - name: Run tests
-        run: pytest -q
+        run: |
+          PYTHONPATH=. pytest -q
 
   build_and_push:
     name: Build & Push to Docker Hub
