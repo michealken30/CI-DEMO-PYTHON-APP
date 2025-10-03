@@ -89,4 +89,4 @@ jobs:
       push: "true"
     secrets:
       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-      DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+      DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_TOKEN }}
