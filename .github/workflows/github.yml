@@ -84,7 +84,7 @@ jobs:
     uses: michealken30/multi-pipeline-repo/.github/workflows/python-docker-build.yml@main
     with:
       repo: michealken30/CI-DEMO-PYTHON-APP
-      path: python-hello
+      path: app
       image_name: michealken30/hello-python:latest
       push: "false"
     secrets:
