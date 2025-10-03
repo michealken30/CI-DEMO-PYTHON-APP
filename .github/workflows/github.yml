@@ -85,7 +85,7 @@ jobs:
     with:
       repo: michealken30/CI-DEMO-PYTHON-APP
       path: python-hello
-      image_name: ${{ secrets.DOCKER_USERNAME }}/hello-python:latest
+      image_name: michealken30/hello-python:latest
       push: "false"
     secrets:
       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
