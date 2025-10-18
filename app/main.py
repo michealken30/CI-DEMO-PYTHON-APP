@@ -1,6 +1,6 @@
 def get_message() -> str:
     """Return the message to print."""
-    return "Hello"
+    return "Hello World from AWS BuildGem!"
 
 
 def main() -> None:
