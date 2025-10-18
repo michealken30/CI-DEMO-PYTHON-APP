@@ -80,14 +80,21 @@ on:
   workflow_dispatch:
 
 jobs:
-  call-docker-build:
+  call-docker-build-deploy-workflow:
     uses: michealken30/multi-pipeline-repo/.github/workflows/python-docker-build.yml@main
     with:
       repo: michealken30/CI-DEMO-PYTHON-APP
       path: app
-      image_name: michealken30/hello-python:latest
+      image_name: "my-python-lambda"
+      lambda_function: "my-python-lambda-func"
       push: "true"
+
+    # secrets:
+    #   DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+    #   DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_TOKEN }}
+
     secrets:
-      DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-      DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_TOKEN }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_REGION: ${{ secrets.AWS_REGION }}
 #
